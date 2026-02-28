@@ -54,13 +54,26 @@ O sistema utiliza o PostgreSQL como fonte única da verdade. A tabela `Products`
 git clone [https://github.com/seu-usuario/stock-master.git](https://github.com/seu-usuario/stock-master.git)
 cd stock-master
 
+# Copie o arquivo de exemplo e configure as variáveis de ambiente
+cp .env.example .env
+
 # Subir os containers (Database + Web)
 docker compose up -d
 
 # Criar banco e rodar migrations (e popular seeds)
 docker compose exec web rails db:prepare
+```
 
-````
+### Variáveis de Ambiente
+
+Copie `.env.example` para `.env` e configure:
+
+| Variável | Descrição | Padrão |
+| :--- | :--- | :--- |
+| `POSTGRES_PASSWORD` | Senha do banco de dados | `password` |
+| `POSTGRES_USER` | Usuário do banco | `postgres` |
+| `POSTGRES_DB` | Nome do banco de desenvolvimento | `app_development` |
+| `RAILS_MAX_THREADS` | Threads do Rails | `5` |
 
 
 ## ⚙️ Configurações de Acesso
