@@ -72,7 +72,7 @@ A aplicação estará disponível em: [http://localhost:3000](http://localhost:3
 
 ### Conexão Externa (DBeaver / Database Audit)
 
-Para fins de QA e validação direta no banco de dados, utilize os seguintes parâmetros no DBeaver:
+Utilize os seguintes parâmetros no DBeaver:
 
 | Parâmetro | Valor |
 | :--- | :--- |
